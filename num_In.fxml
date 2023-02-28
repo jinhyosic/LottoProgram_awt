@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottotest.NumInController">
+   <children>
+      <Pane layoutX="-12.0" layoutY="-4.0" prefHeight="421.0" prefWidth="407.0">
+         <children>
+            <Label layoutX="154.0" layoutY="52.0" text="당첨번호 갱신">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="192.0" text="번호2" />
+            <Label layoutX="336.0" layoutY="192.0" text="번호6" />
+            <Label layoutX="283.0" layoutY="192.0" text="번호5" />
+            <Label layoutX="229.0" layoutY="192.0" text="번호4" />
+            <Label layoutX="173.0" layoutY="192.0" text="번호3" />
+            <Label layoutX="70.0" layoutY="193.0" text="번호1" />
+            <Label layoutX="25.0" layoutY="165.0" text="당첨번호입력">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField id="tfn1" fx:id="tfn1" layoutX="66.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn2" fx:id="tfn2" layoutX="117.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn3" fx:id="tfn3" layoutX="169.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn4" fx:id="tfn4" layoutX="225.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn5" fx:id="tfn5" layoutX="279.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn6" fx:id="tfn6" layoutX="332.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfbN" fx:id="tfbN" layoutX="196.0" layoutY="275.0" prefHeight="23.0" prefWidth="39.0" />
+            <Label layoutX="186.0" layoutY="253.0" text="보너스번호" />
+            <Button id="btNumIn" fx:id="btNumIn" layoutX="152.0" layoutY="315.0" mnemonicParsing="false" text="값 넣기">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
