@@ -16,7 +16,7 @@ class Test_Lotto{
 	int n5;
 	int n6;
 	int bN;
-	int n1p; //È®·ü°è»êº¯¼ö
+	int n1p; //í™•ë¥ ê³„ì‚°ë³€ìˆ˜
 	int n2p;
 	int n3p;
 	int n4p;
@@ -27,19 +27,19 @@ class Test_Lotto{
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	Test_Lotto(){
-		System.out.println("¼ıÀÚ1¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì1ë²ˆ ì…ë ¥");
 		n1 = sc.nextInt();
-		System.out.println("¼ıÀÚ2¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì2ë²ˆ ì…ë ¥");
 		n2 = sc.nextInt();
-		System.out.println("¼ıÀÚ3¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì3ë²ˆ ì…ë ¥");
 		n3 = sc.nextInt();
-		System.out.println("¼ıÀÚ4¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì4ë²ˆ ì…ë ¥");
 		n4 = sc.nextInt();
-		System.out.println("¼ıÀÚ5¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì5ë²ˆ ì…ë ¥");
 		n5 = sc.nextInt();
-		System.out.println("¼ıÀÚ6¹ø ÀÔ·Â");
+		System.out.println("ìˆ«ì6ë²ˆ ì…ë ¥");
 		n6 = sc.nextInt();
-		System.out.println("¼ıÀÚ º¸³Ê½º¹øÈ£ ÀÔ·Â");
+		System.out.println("ìˆ«ì ë³´ë„ˆìŠ¤ë²ˆí˜¸ ì…ë ¥");
 		bN = sc.nextInt();
 		
 		lotto_input(n1,n2,n3,n4,n5,n6,bN);
@@ -97,8 +97,8 @@ class Test_Lotto{
 				n5 = rs.getInt("n5");
 				n6 = rs.getInt("n6");
 				bN = rs.getInt("bonusNum");
-				//µğºñ¿¡¼­ °¡Á®¿Â °ªµé°ú ºñ±³ÇÏ¸ç ·Î¶Ç È®·ü »Ì¾Æ³» º¯¼ö n1p¿¡ ³ÖÀ» °èÈ¹.
-				//Å×½ºÆ® ÄÚµå System.out.println(n1 +" "+ n2 + " " +n3);
+				//ë””ë¹„ì—ì„œ ê°€ì ¸ì˜¨ ê°’ë“¤ê³¼ ë¹„êµí•˜ë©° ë¡œë˜ í™•ë¥  ë½‘ì•„ë‚´ ë³€ìˆ˜ n1pì— ë„£ì„ ê³„íš.
+				//í…ŒìŠ¤íŠ¸ ì½”ë“œ System.out.println(n1 +" "+ n2 + " " +n3);
 			}
 		
 			
@@ -108,3 +108,4 @@ class Test_Lotto{
 		}
 	}
 }
+//
