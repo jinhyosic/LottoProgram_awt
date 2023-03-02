@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottotest.MainController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lotto.MainController">
    <children>
-      <Pane layoutY="4.0" prefHeight="447.0" prefWidth="352.0">
+      <Pane layoutY="4.0" prefHeight="384.0" prefWidth="352.0">
          <children>
-            <Label layoutX="145.0" layoutY="45.0" text="로또확률">
+            <Label layoutX="123.0" layoutY="45.0" text="로또확률예측">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button id="num_In" fx:id="num_In" layoutX="123.0" layoutY="224.0" mnemonicParsing="false" text="회차 갱신">
+            <Button id="num_In" fx:id="num_In" layoutX="121.0" layoutY="237.0" mnemonicParsing="false" text="회차 갱신">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
-            <Button id="persent" fx:id="persent" layoutX="123.0" layoutY="142.0" mnemonicParsing="false" text="확률 보기">
+            <Button id="persent" fx:id="persent" layoutX="121.0" layoutY="156.0" mnemonicParsing="false" text="확률 보기">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
+            <ImageView fitHeight="99.0" fitWidth="111.0" layoutX="5.0" layoutY="7.0">
+               <image>
+                  <Image url="@lottologo.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottotest.NumInController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lotto.NumInController">
    <children>
       <Pane layoutX="-12.0" layoutY="-4.0" prefHeight="421.0" prefWidth="407.0">
          <children>
-            <Label layoutX="154.0" layoutY="52.0" text="당첨번호 갱신">
+            <Label layoutX="150.0" layoutY="45.0" text="당첨번호 입력">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="121.0" layoutY="192.0" text="번호2" />
-            <Label layoutX="336.0" layoutY="192.0" text="번호6" />
-            <Label layoutX="283.0" layoutY="192.0" text="번호5" />
-            <Label layoutX="229.0" layoutY="192.0" text="번호4" />
-            <Label layoutX="173.0" layoutY="192.0" text="번호3" />
-            <Label layoutX="70.0" layoutY="193.0" text="번호1" />
-            <Label layoutX="25.0" layoutY="165.0" text="당첨번호입력">
+            <Label layoutX="120.0" layoutY="156.0" text="번호2" />
+            <Label layoutX="335.0" layoutY="156.0" text="번호6" />
+            <Label layoutX="282.0" layoutY="156.0" text="번호5" />
+            <Label layoutX="228.0" layoutY="156.0" text="번호4" />
+            <Label layoutX="172.0" layoutY="156.0" text="번호3" />
+            <Label layoutX="69.0" layoutY="157.0" text="번호1" />
+            <Label layoutX="24.0" layoutY="129.0" text="당첨번호입력">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField id="tfn1" fx:id="tfn1" layoutX="66.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfn2" fx:id="tfn2" layoutX="117.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfn3" fx:id="tfn3" layoutX="169.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfn4" fx:id="tfn4" layoutX="225.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfn5" fx:id="tfn5" layoutX="279.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfn6" fx:id="tfn6" layoutX="332.0" layoutY="211.0" prefHeight="23.0" prefWidth="39.0" />
-            <TextField id="tfbN" fx:id="tfbN" layoutX="196.0" layoutY="275.0" prefHeight="23.0" prefWidth="39.0" />
-            <Label layoutX="186.0" layoutY="253.0" text="보너스번호" />
-            <Button id="btNumIn" fx:id="btNumIn" layoutX="152.0" layoutY="315.0" mnemonicParsing="false" text="값 넣기">
+            <TextField id="tfn1" fx:id="tfn1" layoutX="65.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn2" fx:id="tfn2" layoutX="116.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn3" fx:id="tfn3" layoutX="168.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn4" fx:id="tfn4" layoutX="224.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn5" fx:id="tfn5" layoutX="278.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfn6" fx:id="tfn6" layoutX="331.0" layoutY="175.0" prefHeight="23.0" prefWidth="39.0" />
+            <TextField id="tfbN" fx:id="tfbN" layoutX="195.0" layoutY="239.0" prefHeight="23.0" prefWidth="39.0" />
+            <Label layoutX="185.0" layoutY="217.0" text="보너스번호" />
+            <Button id="btNumIn" fx:id="btNumIn" layoutX="151.0" layoutY="279.0" mnemonicParsing="false" text="값 넣기">
                <font>
                   <Font size="28.0" />
                </font>
             </Button>
+            <Label layoutX="22.0" layoutY="381.0" prefHeight="19.0" prefWidth="241.0" text="※특정 회차의 당첨번호 결과를 추가합니다." />
+            <Label layoutX="22.0" layoutY="400.0" prefHeight="15.0" prefWidth="228.0" text="※추가된 결과는 다음 확률 연산에 반영." />
+            <ImageView fitHeight="103.0" fitWidth="119.0" layoutX="13.0" layoutY="6.0">
+               <image>
+                  <Image url="@lottologo.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

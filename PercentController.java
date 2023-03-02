@@ -1,4 +1,4 @@
-package lottotest;
+package lotto;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -21,6 +22,7 @@ import javafx.scene.control.Alert.AlertType;
 public class PercentController implements Initializable{
 	@FXML private Button btPercent = new Button();
 	@FXML private Button btClear = new Button();
+	@FXML private Button btAuto = new Button();
 	
 	@FXML private TextField tfn1 = new TextField();
 	@FXML private TextField tfn2 = new TextField();
@@ -53,12 +55,16 @@ public class PercentController implements Initializable{
 		
 		btPercent.setOnAction(event->percent(event));
 		btClear.setOnAction(event->btClear(event));
-		
+		btAuto.setOnAction(event->btAuto(event));
 	}
 	
 	public void btClear(ActionEvent event) {
 		
 		tfClean(); //텍스트필드 초기화 메서드
+	}
+	public void btAuto(ActionEvent event) {
+		
+		tfRandomNum(); //랜덤 번호 추천 메서드
 	}
 
 	public void percent(ActionEvent event) {
@@ -71,22 +77,7 @@ public class PercentController implements Initializable{
 		int n5 = Integer.parseInt(tfn5.getText().toString());
 		int n6 = Integer.parseInt(tfn6.getText().toString());
 		int bN = Integer.parseInt(tfbN.getText().toString());
-//		int n1 = 0;
-//		int n2 = 0;
-//		int n3 = 0;
-//		int n4 = 0;
-//		int n5 = 0;
-//		int n6 = 0;
-//		int bN = 0;
-//
-//tfTest(tfn1.getText().toString(),n1);
-//		tfTest(tfn2,n2);
-//		tfTest(tfn3,n3);
-//		tfTest(tfn4,n4);
-//		tfTest(tfn5,n5);
-//		tfTest(tfn6,n6);
-//		tfTest(tfbN,bN);
-//		
+		
 		if((0 < n1 && n1 < 46) && (0 < n2 && n2 < 46) && (0 < n3 && n3 < 46)&& (0 < n4 && n4 < 46)&& (0 < n5 && n5 < 46) && (0 < n6 && n6 < 46)&& (0 < bN && bN < 46)) {
 			
 			lotto_persent();
@@ -109,8 +100,7 @@ public void lotto_persent() {
 	double rs4 = 0.0;
 	double rs5 = 0.0;
 	double rs6 = 0.0;
-	double rsbn = 0.0; //당첨번호 백분률 결과
-//	int tot = 0; //로또 총 회차.
+	double rsbn = 0.0; //당첨번호 백분률 결과 저장 변수들
 	
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
@@ -125,13 +115,7 @@ public void lotto_persent() {
 		String db_pw = "qwer";
 		try {
 			Connection conn = DriverManager.getConnection(db_url, db_id, db_pw);
-			
-//			String sqlt = "select count(1) from test;";
-//			psmtt = conn.prepareStatement(sqlt); //
-//			tot = psmtt.executeUpdate();
-			
-			
-			String sql = "select * from test;";
+			String sql = "select * from lotto;";
 			psmt = conn.prepareStatement(sql); 
 			rs = psmt.executeQuery();
 			int n1c = 0;
@@ -150,12 +134,10 @@ public void lotto_persent() {
 				int n5 = rs.getInt("n5");
 				int n6 = rs.getInt("n6");
 				int bN = rs.getInt("bonusNum");
-				//디비에서 가져온 값들과 비교하며 로또 확률 뽑아내 변수 n1p에 넣을 계획.
-				//테스트 코드 System.out.println(n1 +" "+ n2 + " " +n3);
-				
-				//첫번째 텍스트필드와 지금까지 모든 로또 당첨번호를 비교 연산 후 확률을 올림
+			
+				//첫번째 텍스트필드 값과 DB내에 있는 값을 비교해 동일 숫자가 나올시 n1c 증가 
 				if(n1==(Integer.parseInt(tfn1.getText().toString()))){
-					n1c++;
+					n1c++; //숫자 등장횟수 증가
 				}
 				if(n2==(Integer.parseInt(tfn1.getText().toString()))) {
 					n1c++;
@@ -335,6 +317,23 @@ public void lotto_persent() {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public void tfRandomNum() {
+		Random rd = new Random();
+		tfn1.setText((rd.nextInt(45)+1)+"");
+		n1 = Integer.parseInt(tfn1.getText().toString());
+		tfn2.setText((rd.nextInt(45)+1)+"");
+		n2 = Integer.parseInt(tfn1.getText().toString());
+		tfn3.setText((rd.nextInt(45)+1)+"");
+		n3 = Integer.parseInt(tfn1.getText().toString());
+		tfn4.setText((rd.nextInt(45)+1)+"");
+		n4 = Integer.parseInt(tfn1.getText().toString());
+		tfn5.setText((rd.nextInt(45)+1)+"");
+		n5 = Integer.parseInt(tfn1.getText().toString());
+		tfn6.setText((rd.nextInt(45)+1)+"");
+		n6 = Integer.parseInt(tfn1.getText().toString());
+		tfbN.setText((rd.nextInt(45)+1)+"");
+		bN = Integer.parseInt(tfn1.getText().toString());
 	}
 
 	public void tfClean() {

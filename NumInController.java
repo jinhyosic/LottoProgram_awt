@@ -1,4 +1,4 @@
-package lottotest;
+package lotto;
 
 import java.io.IOException;
 import java.net.URL;
@@ -75,14 +75,6 @@ public class NumInController implements Initializable {
 
 			alert.showAndWait();
 		}
-//		else if() {
-//			Alert alert = new Alert(AlertType.WARNING);
-//			alert.setTitle("잘못된 값");
-//			alert.setHeaderText("값 미입력 또는 경계 값 벗어남");
-//			alert.setContentText("값은 꼭 입력해야합니다. (1~45 사이의 정수)");
-//
-//			alert.showAndWait();
-//		}
 	}
 	public void lotto_input(int n1, int n2, int n3, int n4, int n5, int n6, int bN){
 		try {
